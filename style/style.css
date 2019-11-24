@@ -1,0 +1,81 @@
+@font-face {
+    src: url("../fonts/TaxiDriver.ttf");
+    font-family: "Taxi Driver";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    background-color: #2574a9;
+}
+
+.container {
+    max-width: 1200px;
+    height: 100px;
+    align-content: center;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: grid;
+    grid-template-areas: 
+        "lgo ... navi";
+    grid-template-columns: auto 1fr auto; /* fr significa fração*/
+}
+
+.logo { 
+    grid-area: lgo;
+}
+
+.logo img {
+    width: 320px;
+}
+
+.navbar {
+    font-size: 18px;
+    grid-area: navi;
+}
+
+.navbar ul {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.navbar a {
+    font-size: 1em;
+    font-family: "Taxi Driver";
+}
+
+main {
+    font-size: 20px;
+}
+
+section {
+    display: grid;
+    justify-content: center; /* alinhamento horizontal */
+    align-content: center; /* alinhamento vertical*/
+    font-family: "Taxi Driver";
+    font-size: 1em;
+    color: #2574a9;
+}
+
+section:nth-child(odd){
+    height: 100vh; /* viewport height*/
+    background-color: #cae1f1;
+}
+
+section:nth-child(even){
+    height: 100vh; /* viewport height*/
+    background-color: #b7d5eb;
+}
